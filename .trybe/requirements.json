@@ -1,0 +1,52 @@
+{
+  "requirements": [
+    {
+      "description": "1 -  Deve adicionar uma serie na base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "2 - Utilizar @ControllerAdvice em controller para informar que a série já existe na base de dados.",
+      "bonus": true
+    },
+    {
+      "description": "3 - Deve retornar todas as séries existentes da base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "4 - Deve retornar lista vazia quando não existir séries na base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "5 - Deve remover série, por um id existente informado.",
+      "bonus": false
+    },
+    {
+      "description": "6 - Utilizar @ControllerAdvice em controller para emitir 'não encontrado' quando tenta remover uma série não existente na base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "7 - Deve adicionar episodio quando existir serie na base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "8 - Utilizar @ControllerAdvice em controller para emitir 'não encontrado' quando tenta adicionar um episódio em uma série não existente na base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "9 - Deve retornar lista de episodios quando existir na base.",
+      "bonus": false
+    },
+    {
+      "description": "10 - Deve retornar a soma da duração de todos episodios.",
+      "bonus": false
+    },
+    {
+      "description": "11 - Deve retornar tempo de todos episodios mesmo se não houver episodio na base de dados.",
+      "bonus": false
+    },
+    {
+      "description": "12 - Utilizar o conceito de Circuit Breaker ao tratamento de exceções.",
+      "bonus": false
+    }
+  ]
+}
