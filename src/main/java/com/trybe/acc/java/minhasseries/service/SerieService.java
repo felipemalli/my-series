@@ -78,13 +78,10 @@ public class SerieService {
    */
   @CircuitBreaker (name = "serie", fallbackMethod = "fallbackFindAllEpisodio")
   public List<Episodio> findAllEpisodios(Integer serieId) {
-    Optional<Serie> serieOptional = serieRepository.findById(serieId);
+    Serie serie = serieRepository
+            .findById(serieId)
+            .orElseThrow(SerieNaoEncontradaException::new);
 
-    if (serieOptional.isEmpty()) {
-      throw new SerieNaoEncontradaException();
-    }
-
-    Serie serie = serieOptional.get();
     return serie.getEpisodios();
   }
 
@@ -105,7 +102,7 @@ public class SerieService {
   }
 
   public List<Episodio> fallbackFindAllEpisodio(
-          Integer id,
+          Integer serieId,
           RuntimeException e
   ) throws ServicoIndisponivelException {
     throw new ServicoIndisponivelException();
