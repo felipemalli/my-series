@@ -104,7 +104,7 @@ public class SerieService {
 
   }
 
-  public void fallbackFindAllEpisodio(
+  public List<Episodio> fallbackFindAllEpisodio(
           Integer id,
           RuntimeException e
   ) throws ServicoIndisponivelException {
