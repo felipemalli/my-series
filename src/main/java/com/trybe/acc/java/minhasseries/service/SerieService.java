@@ -76,7 +76,6 @@ public class SerieService {
   /**
    * Busca todos os episódios de uma série.
    */
-  @CircuitBreaker (name = "serie", fallbackMethod = "fallbackFindAllEpisodio")
   public List<Episodio> findAllEpisodios(Integer serieId) {
     Serie serie = serieRepository
             .findById(serieId)
@@ -100,11 +99,5 @@ public class SerieService {
     return Map.of("tempoEmMinutos", tempoEmMinutos);
 
   }
-
-  public List<Episodio> fallbackFindAllEpisodio(
-          Integer serieId,
-          RuntimeException e
-  ) throws ServicoIndisponivelException {
-    throw new ServicoIndisponivelException();
-  }
+  
 }

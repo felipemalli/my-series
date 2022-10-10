@@ -5,7 +5,7 @@ import com.trybe.acc.java.minhasseries.exception.ErroInesperadoException;
 import com.trybe.acc.java.minhasseries.exception.ErrorPattern;
 import com.trybe.acc.java.minhasseries.exception.SerieExistenteException;
 import com.trybe.acc.java.minhasseries.exception.SerieNaoEncontradaException;
-import com.trybe.acc.java.minhasseries.exception.ServicoIndisponivelException;
+import io.github.resilience4j.circuitbreaker.CallNotPermittedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -39,7 +39,7 @@ public class GerenciadorAdvice {
   }
 
   /** Retorna objeto erro com mensagem e status 503. */
-  @ExceptionHandler(ServicoIndisponivelException.class)
+  @ExceptionHandler(CallNotPermittedException.class)
   public ResponseEntity<ErrorPattern> handlerUnavailableError(Exception exception) {
     return ResponseEntity
             .status(HttpStatus.SERVICE_UNAVAILABLE)
