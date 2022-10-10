@@ -3,11 +3,9 @@ package com.trybe.acc.java.minhasseries.service;
 import com.trybe.acc.java.minhasseries.exception.EpisodioExistenteException;
 import com.trybe.acc.java.minhasseries.exception.SerieExistenteException;
 import com.trybe.acc.java.minhasseries.exception.SerieNaoEncontradaException;
-import com.trybe.acc.java.minhasseries.exception.ServicoIndisponivelException;
 import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.repository.SerieRepository;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -99,5 +97,5 @@ public class SerieService {
     return Map.of("tempoEmMinutos", tempoEmMinutos);
 
   }
-  
+
 }
