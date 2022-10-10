@@ -1,5 +1,5 @@
 resilience4j.circuitbreaker:
   instances:
-    serie:
+    addEpisodio:
       minimumNumberOfCalls: 1
       failureRateThreshold: 50

@@ -6,6 +6,7 @@ import com.trybe.acc.java.minhasseries.exception.SerieNaoEncontradaException;
 import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.repository.SerieRepository;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -54,6 +55,7 @@ public class SerieService {
   /**
    * Adiciona um episódio a uma série.
    */
+  @CircuitBreaker(name = "addEpisodio")
   public Serie addEpisodio(Integer serieId, Episodio episodio) {
     Optional<Serie> serieOptional = serieRepository.findById(serieId);
 
