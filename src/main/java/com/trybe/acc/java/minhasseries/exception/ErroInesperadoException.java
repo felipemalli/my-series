@@ -1,4 +1,9 @@
 package com.trybe.acc.java.minhasseries.exception;
 
-public class ErroInesperadoException {
+public class ErroInesperadoException extends RuntimeException {
+
+  public ErroInesperadoException() {
+    super("Erro Inesperado");
+  }
+
 }
