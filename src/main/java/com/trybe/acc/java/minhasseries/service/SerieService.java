@@ -7,13 +7,10 @@ import com.trybe.acc.java.minhasseries.exception.ServicoIndisponivelException;
 import com.trybe.acc.java.minhasseries.model.Episodio;
 import com.trybe.acc.java.minhasseries.model.Serie;
 import com.trybe.acc.java.minhasseries.repository.SerieRepository;
-
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

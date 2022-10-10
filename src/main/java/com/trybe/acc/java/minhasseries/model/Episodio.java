@@ -37,6 +37,7 @@ public class Episodio {
     this.duracaoEmMinutos = duracaoEmMinutos;
   }
 
+  /** Construtor completo. */
   public Episodio(Integer id, int numero, int duracaoEmMinutos, Serie serie) {
     this.id = id;
     this.numero = numero;

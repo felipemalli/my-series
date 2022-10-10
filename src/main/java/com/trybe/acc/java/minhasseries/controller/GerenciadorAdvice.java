@@ -1,12 +1,11 @@
 package com.trybe.acc.java.minhasseries.controller;
 
-import com.trybe.acc.java.minhasseries.exception.ErrorPattern;
 import com.trybe.acc.java.minhasseries.exception.EpisodioExistenteException;
 import com.trybe.acc.java.minhasseries.exception.ErroInesperadoException;
+import com.trybe.acc.java.minhasseries.exception.ErrorPattern;
 import com.trybe.acc.java.minhasseries.exception.SerieExistenteException;
 import com.trybe.acc.java.minhasseries.exception.SerieNaoEncontradaException;
 import com.trybe.acc.java.minhasseries.exception.ServicoIndisponivelException;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
