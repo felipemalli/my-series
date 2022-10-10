@@ -76,7 +76,7 @@ public class SerieService {
   /**
    * Busca todos os episódios de uma série.
    */
-  @CircuitBreaker (name = "serie")
+  @CircuitBreaker (name = "serie", fallbackMethod = "fallbackFindAllEpisodio")
   public List<Episodio> findAllEpisodios(Integer serieId) {
     Optional<Serie> serieOptional = serieRepository.findById(serieId);
 
@@ -104,7 +104,7 @@ public class SerieService {
 
   }
 
-  public List<Episodio> fallbackAddEpisodio(
+  public List<Episodio> fallbackFindAllEpisodio(
           Integer id,
           RuntimeException e
   ) {
