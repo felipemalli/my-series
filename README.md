@@ -59,7 +59,7 @@ Request body:
       "nome":"Doctor Who"
   }
   ```
-  Body response:
+Response body:
   ```json
   {
       "id": 1,
@@ -73,7 +73,7 @@ Request body:
 - View series <br>
 Route `/series` <br>
 Method: GET <br>
-Request body:
+Response body:
   ```json
   [
       {
@@ -107,7 +107,7 @@ Request body:
     "duracaoEmMinutos": 60
   }
   ```
-  Response body:
+Response body:
   ```json
   {
       "id": 1,
@@ -165,7 +165,7 @@ I utilize a `ControllerAdivice` for mapping the exceptions with `ExceptionHandle
 
 Exception: SerieExistenteException <br>
 StatusCode: 409  <br>
-Body Response:
+Response body:
 ```json
 {
   "error": "Série Existente"
@@ -174,7 +174,7 @@ Body Response:
 
 Excecption: EpisodioExistenteException <br>
 statusCode: 409  <br>
-Body Response:
+Response body:
 ```json
 {
   "error": "Episódio Existente"
@@ -183,7 +183,7 @@ Body Response:
 
 Exception: SerieNaoEncontradaException <br>
 StatusCode: 404  <br>
-Body Response:
+Response body:
 ```json
 {
   "error": "Série não encontrada"
@@ -192,7 +192,7 @@ Body Response:
 
 Exception: ErroInesperadoException <br>
 StatusCode: 500 <br>
-Body Response:
+Response body:
 ```json
 {
   "error": "Erro inesperado"
@@ -204,7 +204,7 @@ I add a `CircuitBreaker` with the library `resilience4j` in endpoint `/series/{s
 
 Exception: ServicoIndisponivelException <br>
 StatusCode 503   <br>
-Body Response:
+Response body:
 ```json
 {
   "error": "Serviço temporariamente indisponível"
