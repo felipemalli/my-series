@@ -1,4 +1,4 @@
-# My series
+# My Series
 
 This project is a API rest for handling series.
 It was made with Spring for data persistence and there is a exception handling with ControllerAdvice and ExceptionHandler.
