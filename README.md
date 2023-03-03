@@ -1,6 +1,6 @@
 # My Series
 
-This project is a API rest for handling series.
+This project is a API REST for handling series.
 It was made with Spring for data persistence and there is a exception handling with ControllerAdvice and ExceptionHandler.
 
 <br>
